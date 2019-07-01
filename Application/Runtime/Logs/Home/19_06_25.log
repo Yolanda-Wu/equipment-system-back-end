@@ -1,0 +1,32 @@
+[ 2019-06-25T10:44:24+08:00 ] ::1 /RMS3/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001980s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001406s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002010s ]
+
+[ 2019-06-25T10:44:33+08:00 ] ::1 /RMS3/index.php/Home/login/check.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `rms_user` [ RunTime:0.0147s ]
+SQL: SELECT `id`,`user_password`,`user_name`,`type` FROM `rms_user` WHERE `id` = 55 AND `user_password` = '555555' LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] session_start(): A session had already been started - ignoring C:\wamp64\www\RMS3\Application\Home\Controller\LoginController.class.php 第 35 行.
+NOTIC: [8] Undefined index: id C:\wamp64\www\RMS3\Application\Home\Controller\LoginController.class.php 第 44 行.
+

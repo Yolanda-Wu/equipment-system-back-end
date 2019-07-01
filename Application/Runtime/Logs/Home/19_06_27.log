@@ -1,0 +1,365 @@
+[ 2019-06-27T09:55:20+08:00 ] 127.0.0.1 /RMS3/index.php/Home/client/getClient.html?client_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001056s ]
+SQL: SHOW COLUMNS FROM `rms_client` [ RunTime:0.0011s ]
+SQL: SELECT `company`,`telephone`,`address`,`contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-06-27T09:55:24+08:00 ] 127.0.0.1 /RMS3/index.php/Home/client/getClient.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `rms_client` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `rms_repair_record` [ RunTime:0.0009s ]
+SQL: SELECT `client_id`,`company`,`telephone`,`address`,`contact` FROM `rms_client`  [ RunTime:0.0005s ]
+SQL: SELECT `order_num`,`repair_date`,`repair_status` FROM `rms_repair_record` WHERE `client_id` = '1'  [ RunTime:0.0004s ]
+SQL: SELECT `order_num`,`repair_date`,`repair_status` FROM `rms_repair_record` WHERE `client_id` = '2'  [ RunTime:0.0004s ]
+SQL: SELECT `order_num`,`repair_date`,`repair_status` FROM `rms_repair_record` WHERE `client_id` = '4'  [ RunTime:0.0004s ]
+
+[ 2019-06-27T10:14:13+08:00 ] 127.0.0.1 /RMS3/index.php/Home/login/check.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `rms_user` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`user_password`,`user_name`,`type` FROM `rms_user` WHERE `id` = 55 AND `user_password` = '555555' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] session_start(): A session had already been started - ignoring C:\wamp64\www\RMS3\Application\Home\Controller\LoginController.class.php 第 31 行.
+NOTIC: [8] Undefined index: id C:\wamp64\www\RMS3\Application\Home\Controller\LoginController.class.php 第 40 行.
+NOTIC: [8] Undefined index: identify C:\wamp64\www\RMS3\Application\Home\Controller\LoginController.class.php 第 45 行.
+
+[ 2019-06-27T10:14:40+08:00 ] 127.0.0.1 /RMS3/index.php/Home/login/check.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+SQL: SHOW COLUMNS FROM `rms_user` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`user_password`,`user_name`,`type` FROM `rms_user` WHERE `id` = 55 AND `user_password` = '555555' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] session_start(): A session had already been started - ignoring C:\wamp64\www\RMS3\Application\Home\Controller\LoginController.class.php 第 31 行.
+NOTIC: [8] Undefined index: id C:\wamp64\www\RMS3\Application\Home\Controller\LoginController.class.php 第 40 行.
+NOTIC: [8] Undefined index: identify C:\wamp64\www\RMS3\Application\Home\Controller\LoginController.class.php 第 45 行.
+
+[ 2019-06-27T10:52:44+08:00 ] 127.0.0.1 /RMS3/index.php/Home/repair/getRepairList.html?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000958s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+ERR: syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST)
+
+[ 2019-06-27T10:53:10+08:00 ] 127.0.0.1 /RMS3/index.php/Home/repair/getRepairList.html?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `rms_repair_record` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `rms_client` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `rms_maintenance_recode` [ RunTime:0.0011s ]
+SQL: SELECT `client_id`,`order_num`,`repair_date`,`repair_status` FROM `rms_repair_record` LIMIT 0,10   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: contact C:\wamp64\www\RMS3\Application\Home\Controller\RepairController.class.php 第 89 行.
+SQL: SELECT `contact` FROM `rms_client` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '979s7f' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `contact` = null LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2222' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `contact` FROM `rms_client` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062699100485' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `contact` = null LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062610150561' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: data C:\wamp64\www\RMS3\Application\Home\Controller\RepairController.class.php 第 98 行.
+
+[ 2019-06-27T10:53:48+08:00 ] 127.0.0.1 /RMS3/index.php/Home/repair/getRepairList.html?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+SQL: SHOW COLUMNS FROM `rms_repair_record` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `rms_client` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `rms_maintenance_recode` [ RunTime:0.0011s ]
+SQL: SELECT `client_id`,`order_num`,`repair_date`,`repair_status` FROM `rms_repair_record` LIMIT 0,10   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: contact C:\wamp64\www\RMS3\Application\Home\Controller\RepairController.class.php 第 90 行.
+SQL: SELECT `contact` FROM `rms_client` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '979s7f' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `contact` = null LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2222' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `contact` FROM `rms_client` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062699100485' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `contact` = null LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062610150561' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: data C:\wamp64\www\RMS3\Application\Home\Controller\RepairController.class.php 第 99 行.
+
+[ 2019-06-27T10:54:18+08:00 ] 127.0.0.1 /RMS3/index.php/Home/repair/getRepairList.html?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `rms_repair_record` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `rms_client` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `rms_maintenance_recode` [ RunTime:0.0024s ]
+SQL: SELECT `client_id`,`order_num`,`repair_date`,`repair_status` FROM `rms_repair_record` LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '979s7f' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2222' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062699100485' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '3' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062610150561' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: data C:\wamp64\www\RMS3\Application\Home\Controller\RepairController.class.php 第 99 行.
+
+[ 2019-06-27T10:54:58+08:00 ] 127.0.0.1 /RMS3/index.php/Home/repair/getRepairList.html?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+SQL: SHOW COLUMNS FROM `rms_repair_record` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `rms_client` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `rms_maintenance_recode` [ RunTime:0.0009s ]
+SQL: SELECT `client_id`,`order_num`,`repair_date`,`repair_status` FROM `rms_repair_record` LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '979s7f' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2222' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062699100485' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '3' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062610150561' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: data C:\wamp64\www\RMS3\Application\Home\Controller\RepairController.class.php 第 101 行.
+
+[ 2019-06-27T10:55:26+08:00 ] 127.0.0.1 /RMS3/index.php/Home/repair/getRepairList.html?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000859s ]
+SQL: SHOW COLUMNS FROM `rms_repair_record` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `rms_client` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `rms_maintenance_recode` [ RunTime:0.0011s ]
+SQL: SELECT `client_id`,`order_num`,`repair_date`,`repair_status` FROM `rms_repair_record` LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '979s7f' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2222' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062699100485' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '3' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062610150561' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2019-06-27T10:55:48+08:00 ] 127.0.0.1 /RMS3/index.php/Home/repair/getRepairList.html?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `rms_repair_record` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `rms_client` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `rms_maintenance_recode` [ RunTime:0.0011s ]
+SQL: SELECT `client_id`,`order_num`,`repair_date`,`repair_status` FROM `rms_repair_record` LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '979s7f' LIMIT 1   [ RunTime:0.0046s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2222' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '2' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062699100485' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `contact` FROM `rms_client` WHERE `client_id` = '3' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `maintainer` FROM `rms_maintenance_recode` WHERE `order_num` = '2019062610150561' LIMIT 1   [ RunTime:0.0074s ]
+
+[ 2019-06-27T11:06:28+08:00 ] ::1 /RMS3/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011471s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2019-06-27T11:10:35+08:00 ] ::1 /RMS3/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007759s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007867s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000540s ]
+
+[ 2019-06-27T11:10:47+08:00 ] ::1 /RMS3/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007552s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007729s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000955s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000792s ]
+
+[ 2019-06-27T11:10:50+08:00 ] ::1 /RMS3/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003987s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004047s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2019-06-27T11:11:23+08:00 ] ::1 /RMS3/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007628s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007811s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000622s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2019-06-27T11:13:48+08:00 ] ::1 /RMS3/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2019-06-27T11:19:07+08:00 ] ::1 /RMS3/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000908s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2019-06-27T11:19:35+08:00 ] ::1 /RMS3/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009124s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009248s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2019-06-27T11:22:39+08:00 ] ::1 /RMS3/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000798s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
