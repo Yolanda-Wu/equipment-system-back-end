@@ -57,7 +57,7 @@ class LoginController extends Controller{
                         $redirect_url='./#/engineer';
                         break;
                     case 4:
-                        $redirect_url='./#/operator';
+                        $redirect_url='./#/admin';
                         break;
                     default:$redirect_url='/#';
                 }
@@ -102,7 +102,8 @@ class LoginController extends Controller{
                     $redirect_url='#/engineer';
                     break;
                 case 4:
-                    $redirect_url='#/operator';
+                    $redirect_url='#/admin';
+                default:$redirect_url='/#';
             }
             //echo $reply['data']['identify'];
             $reply['data']['redirect_url']=$redirect_url;

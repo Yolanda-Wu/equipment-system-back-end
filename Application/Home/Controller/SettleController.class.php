@@ -16,8 +16,8 @@ class SettleController extends Controller {
 
 
     public function settleRepair(){
-        //if($_SESSION['admin'] && $_SESSION['type']==1){
-        if(1){
+        if($_SESSION['admin']){
+        //if(1){
             $repair_records    =   D('repair_record');
             
             //$condition['order_num']     =       I('post.order_num');

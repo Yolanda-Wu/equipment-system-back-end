@@ -17,8 +17,8 @@ class RepairController extends Controller{
     //新增一个报修单
     public function addRepair(){
 
-        //if($_SESSION['admin'] && $_SESSION['type']==1){
-        if(1){
+        if($_SESSION['admin']){
+        //if(1){
             $repair_record   =   D('repair_record');
 
             //$form['repair_date']           =   I('post.repair_date');
@@ -78,8 +78,8 @@ class RepairController extends Controller{
     //获取全部保修单某页信息
 	public function getRepairList(){
 
-        //if($_SESSION['admin']  && $_SESSION['type']==1){
-        if(1){
+        if($_SESSION['admin']  ){
+        //if(1){
             $repair_record   =   D('repair_record');
             $client          =   D('client');
             $maintenance_recode   =   D('maintenance_recode');
@@ -132,8 +132,8 @@ class RepairController extends Controller{
     //根据报修单号获取相关信息
 	public function getRepair(){
 
-        //if($_SESSION['admin'] && $_SESSION['type']==1){ 
-        if(1){ 
+        if($_SESSION['admin'] ){ 
+        //if(1){ 
             $repair_record   =   D('repair_record');
             $client          =   D('client');
             $maintenance_recode   =   D('maintenance_recode');
@@ -192,7 +192,7 @@ class RepairController extends Controller{
 
     public function getClientsRepairs(){
 
-        if($_SESSION['admin'] && $_SESSION['type']==1){
+        if($_SESSION['admin']){
             $repair_record   =   D('repair_record');
 
             $client    	   =   I('get.client_id');

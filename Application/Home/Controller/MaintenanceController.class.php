@@ -18,8 +18,8 @@ class MaintenanceController extends Controller{
     public function assignMaintenance(){
 
         //任务调度员工可以使用该项功能
-        //if($_SESSION['admin'] && $_SESSION['type']==4){
-        if(1){
+        if($_SESSION['admin']){
+        //if(1){
             $maintenance_recode   =   D('maintenance_recode');
             $repair_record   =   D('repair_record');
 
@@ -39,7 +39,8 @@ class MaintenanceController extends Controller{
     		//dump( $form);
     		//die();
             $data = $maintenance_recode->add($form);
-            $r_result = $repair_record->where('order_num='.$form['order_num'])->setField('repair_status',2);
+            $condition['order_num']     =       $form['order_num'];
+            $r_result = $repair_record->where($condition)->setField('repair_status',2);
 
             if($data){
                 http_response_code(200);
@@ -66,8 +67,8 @@ class MaintenanceController extends Controller{
     //（有maintainerId参数）--返回该维修人员订单信息 ||（无maintainerId参数）--返回所有订单信息
     public function getMaintenanceList(){
         //任务调度人员，技术工程师，运营监督员可以使用该功能
-        //if($_SESSION['admin'] && ($_SESSION['type']==4||$_SESSION['type']==2||$_SESSION['type']==5)){
-        if(1){
+        if($_SESSION['admin']){
+        //if(1){
             if(is_array($_GET)&&count($_GET)>0){
                 $maintenance_recode   =   D ('maintenance_recode');
 
@@ -121,8 +122,8 @@ class MaintenanceController extends Controller{
     //根据订单号获取订单信息
     public function getMaintenance(){
          //任务调度人员，技术工程师，运营监督员可以使用该功能
-        //if($_SESSION['admin'] && ($_SESSION['type']==4||$_SESSION['type']==2||$_SESSION['type']==5)){
-        if(1){
+        if($_SESSION['admin'] ){
+        //if(1){
             $maintenance_recode   =   D('maintenance_recode');
 
             $condition['order_num']    	   =   I('get.order_num');
@@ -155,8 +156,8 @@ class MaintenanceController extends Controller{
 
     public function updateMaintenance(){
         //仅技术工程师可以使用该功能
-        //if($_SESSION['admin'] && $_SESSION['type']==2){
-        if(1){
+        if($_SESSION['admin']){
+        //if(1){
             $maintenance_recode   =   D('maintenance_recode');
             $repair_records    =   D('repair_record');
 
@@ -180,8 +181,9 @@ class MaintenanceController extends Controller{
     		//dump($form);
             //die();
             //print_r($form);
-            $data = $maintenance_recode->where('order_num='.$form['order_num'])->field('manual_cost,material_cost,note,maintain_status,order_num,detect_record,maintain_record')->save($form);
-            $m_result = $repair_records->where('order_num='.$form['order_num'])->setField('repair_status',$form['maintain_status']);
+            $condition['order_num']        =        $form['order_num'];
+            $data = $maintenance_recode->where($condition)->field('manual_cost,material_cost,note,maintain_status,order_num,detect_record,maintain_record')->save($form);
+            $m_result = $repair_records->where($condition)->setField('repair_status',$form['maintain_status']);
 
             if($data||$m_result){
                 http_response_code(200);
@@ -207,8 +209,8 @@ class MaintenanceController extends Controller{
     //获取维修人员信息（其实没什么luan用）
 	public function getMaintainers(){
         //任务调度人员，技术工程师，运营监督员可以使用该功能
-        //if($_SESSION['admin'] && ($_SESSION['type']==4||$_SESSION['type']==2||$_SESSION['type']==5)){
-        if(1){
+        if($_SESSION['admin'] ){
+        //if(1){
             $user   =   D('user');
 
             //$client    	   =   I('get.order_num');

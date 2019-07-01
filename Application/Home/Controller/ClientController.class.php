@@ -16,8 +16,8 @@ class ClientController extends Controller{
 	
     public function getClient(){
 
-        //if($_SESSION['admin'] && ($_SESSION['type']==1||$_SESSION['type']==5)){
-        if(1){
+        if($_SESSION['admin'] ){
+        //if(1){
             //echo 'authorizetm pass';
             if(is_array($_GET)&&count($_GET)>0){
                 //get含参数时返回指定用户信息
@@ -87,8 +87,8 @@ class ClientController extends Controller{
     public function updateClient(){
         //客户存在时更新客户记录
         //客户不存在时添加改客户记录
-        //if($_SESSION['admin'] && $_SESSION['type']==1){  
-        if(1){ 
+        if($_SESSION['admin'] ){  
+        //if(1){ 
             $clients            =   D('client');
             
             
@@ -158,8 +158,8 @@ class ClientController extends Controller{
 
 
     public function deleteClient(){
-        //if($_SESSION['adimin'] $$ $_SESSION['type']==1){
-        if(1){
+        if($_SESSION['adimin']){
+       // if(1){
             $client     =       D('client');
             $condition['client_id']     =       I('post.client_id');
             echo $condition['client_id'];
